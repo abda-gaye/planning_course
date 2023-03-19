@@ -67,11 +67,12 @@ select{
     height: 100%;
     color: #fff;
     display: grid;
-    grid-template-rows: 20% 5% 75%;
+    grid-template-rows: 20% 3% 77%;
     background-color: rgba(21, 17, 17, 0.912);
 
 }
 .title{
+    position: relative;
     width: 100%;
     background-color: rgba(21, 17, 17, 0.912);
 }
@@ -89,7 +90,7 @@ select{
 }
 .child{
     width: 100%;
-    background-color: rebeccapurple;
+    background-color: rgba(21, 17, 17, 0.912);
     display: grid;
     grid-template-columns: 20% 80%;
     border-radius: 10px;
@@ -97,6 +98,48 @@ select{
 }
 .child:nth-child(1)>:nth-child(1){
     background-color: rgba(21, 17, 17, 0.912);
+    border-top-left-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+.child:nth-child(1)>:nth-child(2){
+    background-color: green;
+    border-top-left-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+.child:nth-child(2)>:nth-child(2){
+    background-color: green;
+    border-top-left-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+.child:nth-child(3)>:nth-child(2){
+    background-color: green;
+    border-top-left-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+.child:nth-child(4)>:nth-child(2){
+    background-color: green;
+    border-top-left-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+.child:nth-child(5)>:nth-child(2){
+    background-color: green;
+    border-top-left-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+.child:nth-child(6)>:nth-child(2){
+    background-color: green;
     border-top-left-radius: 10px;
     text-transform: uppercase;
     text-align: center;
@@ -136,6 +179,17 @@ select{
     border-top-left-radius: 10px;
     text-transform: uppercase;
     text-align: center;
-
-
+}
+.title p{
+    font-size: 2em;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    top: 30px;
+}
+.title span{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 1.5em;
 }
