@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .container{
     height: 100vh;
@@ -53,12 +54,20 @@ select{
 }
 .leftContent .descriptions .description{
     margin-top: 10px;
-    width: 45%;
+    cursor: pointer;
+    width: 40%;
     height: 100px;
     border-radius: 10px;
     background-color: grey;
+    align-items:center;
+    justify-content: space-around;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
 }
-
+.description span{
+    margin-left: 30px;
+}
 
 
 
@@ -186,16 +195,17 @@ select{
     text-align: center;
 }
 .title p{
-    font-size: 2em;
+    font-size: 2.4em;
+    left: 10px;
     font-weight: 800;
     font-family: Arial, Helvetica, sans-serif;
     position: relative;
-    top: 30px;
+    top: 4px;
 }
 .title span{
     position: absolute;
     bottom: 5px;
-    left: 5px;
+    left: 10px;
     font-size: 1.5em;
 }
 .darkParent{
@@ -216,3 +226,18 @@ select{
     cursor: pointer;
     border-radius: 50%;
 }
+/* .changeColor{
+    margin-top: 10px;
+    width: 40%;
+    height: 100px;
+    border-radius: 10px;
+    background-color: orange;
+    align-items:center;
+    justify-content: space-around;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+.changeColor span{
+    margin-left: 30px;
+} */
