@@ -12,6 +12,14 @@
     align-items: center;
     background-color: grey;
 }
+.container.active{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
 .container #search{
     width: 90%;
     text-align: center;
@@ -20,6 +28,17 @@
     padding: 7px;
     border-radius: 10px;
     background-color: gray;
+}
+.container #search.active{
+    width: 90%;
+    text-align: center;
+    margin-left: 15px;
+    margin-top: 5px;
+    padding: 7px;
+    color: #fff;
+    font-weight: 900;
+    border-radius: 10px;
+    background-color: lightcyan;
 }
 select{
     width: 90%;
@@ -41,6 +60,11 @@ select{
     height: 100%;
     background-color: rgb(53, 48, 48);
 }
+.container .main .leftContent.active{
+    width: 30%;
+    height: 100%;
+    background-color: lightblue;
+}
 
 .leftContent .descriptions{
     margin-top: 18px;
@@ -50,7 +74,6 @@ select{
     height: 400px;
     flex-wrap: wrap;
     gap: 10px;
-
 }
 .leftContent .descriptions .description{
     margin-top: 10px;
@@ -64,6 +87,9 @@ select{
     display:grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(2,1fr);
+}
+.leftContent .descriptions .description.active{
+    background-color: lightcyan;
 }
 .description span{
     margin-left: 30px;
@@ -85,9 +111,22 @@ select{
     width: 100%;
     background-color: rgba(21, 17, 17, 0.912);
 }
+.title.active{
+    position: relative;
+    width: 100%;
+    background-color: rosybrown;
+}
 .hours{
     width: 100%;
     background-color: grey;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(14,1fr);
+}
+.hours.active{
+    width: 100%;
+    background-color: lightcyan;
+    color: #000;
     border-radius: 20px;
     display: grid;
     grid-template-columns: repeat(14,1fr);
@@ -112,17 +151,32 @@ select{
     text-align: center;
 
 }
-.child:nth-child(1)>:nth-child(2){
-        background-color: rgba(128, 128, 128, 0.916);
-
+.child:nth-child(1)>:nth-child(1).active{
+    background-color: rosybrown;
     border-radius: 10px;
     text-transform: uppercase;
     text-align: center;
 
 }
+.child:nth-child(3)>:nth-child(1).active{
+    background-color: rosybrown;
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+.child:nth-child(1)>:nth-child(2){
+    background-color: rgba(128, 128, 128, 0.916);
+    display: grid;
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    grid-template-columns: repeat(14,1fr);
+
+}
 .child:nth-child(2)>:nth-child(2){
         background-color: rgba(128, 128, 128, 0.916);
-
+display: grid;grid-template-columns: repeat(14,1fr);
     border-radius: 10px;
     text-transform: uppercase;
     text-align: center;
@@ -166,6 +220,13 @@ select{
     text-align: center;
 
 }
+.child:nth-child(2)>:nth-child(1).active{
+    background-color: rosybrown;
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+
+}
 .child:nth-child(3)>:nth-child(1){
     background-color: rgba(21, 17, 17, 0.912);
     border-radius: 10px;
@@ -173,6 +234,13 @@ select{
     text-align: center;
 
 }
+/* .child:nth-child(3)>:nth-child(1).active{
+    background-color: rgba(21, 17, 17, 0.912);
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+
+} */
 .child:nth-child(4)>:nth-child(1){
     background-color: rgba(21, 17, 17, 0.912);
     border-radius: 10px;
@@ -180,8 +248,23 @@ select{
     text-align: center;
 
 }
+.child:nth-child(4)>:nth-child(1).active{
+    background-color: rosybrown;
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+
+}
 .child:nth-child(5)>:nth-child(1){
-    background-color: rgba(21, 17, 17, 0.912);
+    background-color: rgba(21, 17, 17, 0.912);;
+    border-top-left-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+
+
+}
+.child:nth-child(5)>:nth-child(1).active{
+    background-color: rosybrown;
     border-top-left-radius: 10px;
     text-transform: uppercase;
     text-align: center;
@@ -190,6 +273,12 @@ select{
 }
 .child:nth-child(6)>:nth-child(1){
     background-color: rgba(21, 17, 17, 0.912);
+    border-top-left-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.child:nth-child(6)>:nth-child(1).active{
+    background-color: rosybrown;
     border-top-left-radius: 10px;
     text-transform: uppercase;
     text-align: center;
@@ -220,24 +309,72 @@ select{
     width: 80px;
 }
 .dark{
+    left: 0;
+    position: absolute;
     background-color: #000;
     height: 30px;
     width: 30px;
     cursor: pointer;
     border-radius: 50%;
 }
-/* .changeColor{
-    margin-top: 10px;
-    width: 40%;
-    height: 100px;
-    border-radius: 10px;
-    background-color: orange;
-    align-items:center;
-    justify-content: space-around;
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr);
+.darkParent.active .dark{
+    left: 40px;
 }
-.changeColor span{
-    margin-left: 30px;
-} */
+
+.child:nth-child(1)>:nth-child(2).active{
+    background-color: lightcyan;
+    border-top-left-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.child:nth-child(2)>:nth-child(2).active{
+    background-color: lightcyan;
+    border-top-left-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.child:nth-child(3)>:nth-child(2).active{
+    background-color: lightcyan;
+    border-top-left-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.child:nth-child(4)>:nth-child(2).active{
+    background-color: lightcyan;
+    border-top-left-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.child:nth-child(5)>:nth-child(2).active{
+    background-color: lightcyan;
+    border-top-left-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.child:nth-child(6)>:nth-child(2).active{
+    background-color: lightcyan;
+    border-top-left-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.c1{
+    width: 100px;
+    height: 85px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #fff;
+}
+.c2{
+    width: 100px;
+    height: 85px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #fff;
+}
+.c3{
+    width: 100px;
+    height: 85px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #fff;
+}
